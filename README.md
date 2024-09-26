@@ -1,4 +1,4 @@
-# Deploying a Node.js Application on AWS EC2 
+# Deploying a Node.js Application on AWS EC2 ##
 ## Introduction
 This project demonstrates the process of deploying a Node.js application on an AWS EC2 instance. It covers the necessary steps to set up the development environment, configure the EC2 instance, and deploy the application.
 ## Getting Started
