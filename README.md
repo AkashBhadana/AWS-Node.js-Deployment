@@ -6,8 +6,8 @@
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-![CI](https://github.com/AkashBhadana/AWS-Node.js-Deployment/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/github/license/AkashBhadana/AWS-Node.js-Deployment?style=flat)
+![CI](https://github.com/AkashBhadana/Stripe-Checkout-Microservice-AWS-ECS-Ready-CI-CD/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/github/license/AkashBhadana/Stripe-Checkout-Microservice-AWS-ECS-Ready-CI-CD?style=flat)
 
 A production-minded Node.js + Express template that demonstrates a Stripe checkout flow, Docker deployment, CI/CD, and an AWS-ready infrastructure story.
 
@@ -57,8 +57,8 @@ A production-minded Node.js + Express template that demonstrates a Stripe checko
 ### Setup
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/AkashBhadana/AWS-Node.js-Deployment.git
-   cd AWS-Node.js-Deployment
+   git clone https://github.com/AkashBhadana/Stripe-Checkout-Microservice-AWS-ECS-Ready-CI-CD.git
+   cd Stripe-Checkout-Microservice-AWS-ECS-Ready-CI-CD
    ```
 2. **Copy the example env**
    ```bash
