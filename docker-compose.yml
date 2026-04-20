@@ -4,9 +4,20 @@ services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - "${PORT:-3000}:${PORT:-3000}"
     env_file:
       - .env
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "const p=process.env.PORT||3000;require('http').get(`http://localhost:${p}/healthz`,(res)=>process.exit(res.statusCode===200?0:1)).on('error',()=>process.exit(1))"
+        ]
+      interval: 1m
+      timeout: 10s
+      retries: 3
     # To enable live-reloading during development, uncomment the volumes section below:
     # volumes:
     #   - .:/usr/src/app

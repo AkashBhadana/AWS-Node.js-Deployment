@@ -1,12 +1,11 @@
 # Our node app is based on `18-alpine` image 
 FROM node:18-alpine
 
-# Setting up the environment variables needed:
+# Setting up node environment defaults:
+ENV NODE_ENV=production
 ENV DOMAIN="http://localhost:3000" \
-PORT=3000 \
-STATIC_DIR="./client" \
-PUBLISHABLE_KEY="" \
-SECRET_KEY=""
+  PORT=3000 \
+  STATIC_DIR="./client"
 
 WORKDIR /usr/src/app
 
@@ -18,4 +17,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "server.js"].
+CMD ["node", "server.js"]

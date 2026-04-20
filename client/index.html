@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Node.js Application</title>
-  <style>
-    /* CSS for styling */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-    }
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-      
-    }
-    img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Welcome to My Node.js Application</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rollout Stripe.js Workshops</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">AWS Node.js Deployment</p>
+        <h1>Launch Stripe-powered workshops in minutes</h1>
+        <p>
+          A single repository that demonstrates Dockerized Node.js, Stripe checkout,
+          automation, and an AWS production-ready deployment story.
+        </p>
+        <div class="hero__actions">
+          <a class="btn primary" href="#workshops">Explore workshops</a>
+          <a class="btn ghost" href="#deployment">See deployment</a>
+        </div>
+      </div>
+      <div class="hero__badge">
+        <span>Docker + ECS</span>
+        <p>Fully-configured checkout flow and deployment pipeline.</p>
+      </div>
+    </header>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>This is a simple Node.js application that serves a basic HTML page.</p>
-    </section>
+    <main>
+      <section class="section" id="workshops">
+        <div class="section__heading">
+          <h2>Workshop lineup</h2>
+          <p>Each session maps to a Stripe price/checkout session so you can demo real revenue.</p>
+        </div>
+        <div id="workshop-grid" class="cards">
+          <p class="muted">Loading workshops…</p>
+        </div>
+        <p id="status-message" class="muted status"></p>
+      </section>
 
-    <section>
-      <h2>Features</h2>
-      <ul>
-        <li>Serves a static HTML page</li>
-        <li>Demonstrates a basic Node.js server setup</li>
-        <li>Can be customized and expanded upon</li>
-      </ul>
-    </section>
+      <section class="section gray" id="deployment">
+        <div class="section__heading">
+          <h2>Production-ready deployment</h2>
+          <p>Docker, CI/CD, Terraform, and observability make this project resume-ready.</p>
+        </div>
+        <div class="stacked">
+          <article>
+            <h3>Validated config</h3>
+            <p>Env validation ensures secrets and price IDs are present before the server starts.</p>
+          </article>
+          <article>
+            <h3>CI + tests</h3>
+            <p>ESLint and Jest cover linting and sanity checks, run automatically via GitHub Actions.</p>
+          </article>
+          <article>
+            <h3>AWS infra</h3>
+            <p>Use the Terraform plan to publish to ECS/ECR, backed by CloudWatch alarms.</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
-    <section>
-      <html>
-<head>
-    <title>Charter</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
-    <div id="container" style="width:100%; height:400px;"></div>
-    <button id="button" class="autocompare" onclick="plotNewChart()">Add series</button>
-    <script type="text/javascript">
-         $(function () { $('#container').highcharts({ chart: { events: { addSeries: function () { var label = this.renderer.label('A series was added, about to redraw chart', 100, 120).attr({ fill: Highcharts.getOptions().colors[0], padding: 10, r: 5, zIndex: 8 }) .css({ color: '#FFFFFF' }) .add(); setTimeout(function () { label.fadeOut(); }, 1000); } } }, xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] }, series: [{ data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4] }] }); });
-    </script>
-</body>
-</html>
-</section>
+    <footer>
+      <p>Need help customizing? Clone the repo, swap the price IDs, and update the .env file.</p>
+    </footer>
 
-<p>This project was made by Akash Bhadana.</p>
-</main>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

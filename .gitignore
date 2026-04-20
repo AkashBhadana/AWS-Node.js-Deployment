@@ -1,7 +1,11 @@
+.codex
+node_modules
 .env
 .DS_Store
+npm-debug.log*
+script-session-closer.md
+script_session_closer.log
+*.log
+coverage
 .vscode
-
-# Dependencies
-node_modules
-package-lock.json
+.idea
